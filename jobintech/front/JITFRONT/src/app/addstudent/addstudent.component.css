@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    border: 2px solid rgb(68, 68, 68);
+    overflow: hidden;
+    width: 75%;
+    height: fit-content;
+    margin-top: 25px;
+}
+
+td,th{
+    border: 1px solid rgb(131, 131, 131);
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.input{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    width: 300px;
+}
+
+.inputi{
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+}
+
+.selecti{
+    text-align: center;
+    font-size: 15px;
+    border: 0;
+    padding: 10Px;
+    width: 120px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    border-radius: 5px;
+}
+
+.deleteall{
+    background-color: red;
+    color: white;
+    border: 0;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    padding: 10px;
+    font-size: 22px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.add{
+    background-color: blue;
+    color: white;
+    border: 0;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    padding: 10px;
+    font-size: 22px;
+    margin: 10px;
+    border-radius: 5px; 
+}
+
+.select{
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    border: 0;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.384);
+    margin: 10px;
+    border-radius: 5px;
+    width: 320px;
+}
+
+
+
+.delete{
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
+    border: 0;
+    background-image: url(../../assets/delete.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.update{
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
+    border: 0;
+    background-image: url(../../assets/edit.png);
+    background-position: center;
+    background-size: cover;
+}
+
+form{
+    margin: 15px;
+}
+
+.manage{
+    display: flex;
+}
+
+.student{
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bolder;
+}

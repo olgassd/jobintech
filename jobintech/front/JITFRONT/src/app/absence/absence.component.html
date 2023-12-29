@@ -1,0 +1,10 @@
+<div class="line">
+    <label class="label">Absence day :</label><input type="date" #date class="input"><br>
+</div>
+<div class="line">
+    <label class="label">justified :</label><input type="checkbox" [(ngModel)]="ischecked" class="checkbox" [(ngModel)]="stoptext"><br>
+</div>
+<div class="line">
+    <label class="label">description :</label><textarea #desc [readonly]="!stoptext"></textarea><br>
+</div>
+    <button (click)="addabsence(date.value,desc.value)" class="add">add</button>

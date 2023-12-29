@@ -1,0 +1,49 @@
+<div class="manage">
+    <form [formGroup]="form">
+        <input type="text" formControlName="StudentName" placeholder="StudentName" class="input"><br>
+        <input type="tel" formControlName="number" placeholder="number" class="input"><br>
+        <input type="email" formControlName="email" placeholder="email" class="input"><br>
+        <select formControlName="speciality" class="select">
+            <option value="" selected style="color: gray;">speciality</option>
+            <option value="dotnet">DotNet</option>
+            <option value="Java">Java</option>
+            <option value="Cyber">Cyber</option>
+        </select><br>
+        <button (click)="add()" class="add">add student</button>
+        <button (click)="deleteAll()" class="deleteall">delete all</button>
+    </form>
+    <table>
+        <thead>
+            <th>student name</th>
+            <th>number</th>
+            <th>email</th>
+            <th>speciality</th>
+            <th>Absence</th>
+            <th>delete</th>
+            <th>update</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doc of docs; let i=index" [formGroup]="updateform">
+                    <td (click)="absence(doc.studentId)" class="student"><span *ngIf="!doc.isEditing" title="{{doc.studentName}}">{{doc!.studentName}}</span> 
+                    <input type="text" formControlName="studentName" *ngIf="doc.isEditing" class="inputi">
+                
+                    <td><span *ngIf="!doc.isEditing" title="{{doc.number}}">{{doc!.number}}</span> 
+                    <input type="text" formControlName="number" *ngIf="doc.isEditing" class="inputi">
+                
+                    <td><span *ngIf="!doc.isEditing" title="{{doc.email}}">{{doc!.email}}</span> 
+                    <input type="text" formControlName="email" *ngIf="doc.isEditing" class="inputi">
+                    
+                    <td><span *ngIf="!doc.isEditing" title="{{doc.speciality}}">{{doc!.speciality}}</span> 
+                    <select type="text" formControlName="speciality" *ngIf="doc.isEditing" class="selecti">
+                        <option value="dotnet">DotNet</option>
+                        <option value="Java">Java</option>
+                        <option value="Cyber">Cyber</option>
+                    </select>
+                    </td>
+                    <td><span>{{doc.Abcense}}</span></td>
+                    <td><button (click)="deleteone(doc.studentId)" class="delete"></button></td>
+                <td><button (click)="update(doc)" class="update"></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
